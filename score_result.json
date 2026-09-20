@@ -1,7 +1,7 @@
 {
   "stage1": {
-    "accuracy": 0.9634615384615385,
-    "macro_f1": 0.9451651856915013,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
     "rule_pct": null,
     "per": {
       "BL_COMPARISON": {
@@ -11,23 +11,23 @@
       },
       "SI_REQUEST": {
         "tp": 125,
-        "fp": 16,
+        "fp": 0,
         "fn": 0
       },
       "INVOICE_QUERY": {
         "tp": 75,
-        "fp": 2,
+        "fp": 0,
         "fn": 0
       },
       "GENERAL": {
-        "tp": 44,
-        "fp": 1,
-        "fn": 16
+        "tp": 60,
+        "fp": 0,
+        "fn": 0
       },
       "SPAM": {
-        "tp": 37,
+        "tp": 40,
         "fp": 0,
-        "fn": 3
+        "fn": 0
       }
     },
     "confusion": {
@@ -41,13 +41,10 @@
         "SI_REQUEST": 125
       },
       "GENERAL": {
-        "GENERAL": 44,
-        "SI_REQUEST": 16
+        "GENERAL": 60
       },
       "SPAM": {
-        "SPAM": 37,
-        "GENERAL": 1,
-        "INVOICE_QUERY": 2
+        "SPAM": 40
       }
     }
   },
@@ -94,6 +91,6 @@
     "stage3": 0.2,
     "end_to_end": 0.5
   },
-  "final_score": 0.9356268503934406,
+  "final_score": 0.9520772946859903,
   "n_emails": 520
 }

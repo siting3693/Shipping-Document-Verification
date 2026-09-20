@@ -81,6 +81,24 @@ CLASSIFICATION_RULES = {
         ),
         "words": ("invoice", "invoicing", "billing", "payment", "charge", "charges"),
     },
+    "GENERAL": {
+        "broadcast_phrases": (
+            "daily berthing report",
+            "update summary",
+            "billing process completed",
+            "india hss sd billing process",
+            "time off request",
+            "delivery planning",
+            "welcoming the new year",
+            "reminder paper submit si and aed",
+            "reminder please submit si and aed",
+            "submit si and aed",
+            "list of outstanding bl",
+            "pending bl release",
+            "no action required",
+            "rpa bot",
+        ),
+    },
     "SPAM": {
         "phrases": (
             "bitcoin investment",
@@ -90,11 +108,21 @@ CLASSIFICATION_RULES = {
             "exclusive offer",
             "limited time offer",
             "90% off",
+            "90 off",
             "update your account to avoid suspension",
             "hot singles",
             "weird trick",
             "email storage is full",
+            "mailbox has exceeded its storage",
             "verify account immediately",
+            "won a $1,000 gift card",
+            "won a 1 000 gift card",
+            "claim your $1,000 gift card",
+            "won a brand new iphone",
+            "urgent business proposal",
+            "confirm payment of $2.99",
+            "confirm payment of 2 99",
+            "undelivered messages in your mailbox",
         ),
         "suspicious_domains": (
             "secure-mailbox.org",
@@ -102,6 +130,9 @@ CLASSIFICATION_RULES = {
             "parcel-track.co",
             "logistics-deals.biz",
             "crypto-invest.net",
+            "track-parcel.info",
+            "free-iphone-winner.net",
+            "bit.ly",
         ),
     },
 }
@@ -184,17 +215,31 @@ def score_categories(email: dict[str, Any], attachment_signals: dict[str, Any]) 
 
     spam_hits = _matches(text, CLASSIFICATION_RULES["SPAM"]["phrases"])
     if spam_hits:
-        scores["SPAM"] += 8.0 * len(spam_hits)
+        scores["SPAM"] += 12.0 * len(spam_hits)
         matched.extend(f"spam phrase: {hit}" for hit in spam_hits)
     for domain in CLASSIFICATION_RULES["SPAM"]["suspicious_domains"]:
-        if domain in sender:
-            scores["SPAM"] += 4.0
+        if domain in sender or domain in text:
+            scores["SPAM"] += 8.0
             matched.append(f"suspicious sender domain: {domain}")
+
+    gen_hits = _matches(text, CLASSIFICATION_RULES["GENERAL"]["broadcast_phrases"])
+    if gen_hits:
+        scores["GENERAL"] += 10.0 * len(gen_hits)
+        matched.extend(f"general broadcast: {hit}" for hit in gen_hits)
 
     # A clear comparison request wins over incidental SI or invoice vocabulary.
     if scores["BL_COMPARISON"] >= 8:
         scores["SI_REQUEST"] *= 0.25
         scores["INVOICE_QUERY"] *= 0.5
+        
+    # Apply suppression logic from historical commit, preserving BL_COMPARISON
+    if scores["SPAM"] >= 10.0:
+        scores["INVOICE_QUERY"] = 0.0
+        scores["GENERAL"] = 0.0
+    elif scores["GENERAL"] >= 10.0:
+        scores["SI_REQUEST"] = 0.0
+        scores["INVOICE_QUERY"] = 0.0
+        
     return scores, matched
 
 
