@@ -1,0 +1,5252 @@
+[
+  {
+    "email_id": "email_001",
+    "attachments": [
+      {
+        "file": "attachments/email_001_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_001_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_001_SI.txt",
+    "selected_BL": "attachments/email_001_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_003",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_004",
+    "attachments": [
+      {
+        "file": "attachments/email_004_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_004_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_004_SI.txt",
+    "selected_BL": "attachments/email_004_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_005",
+    "attachments": [
+      {
+        "file": "attachments/email_005_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_005_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_005_SI.xlsx",
+    "selected_BL": "attachments/email_005_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_006",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_009",
+    "attachments": [
+      {
+        "file": "attachments/email_009_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_009_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_009_SI.txt",
+    "selected_BL": "attachments/email_009_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_013",
+    "attachments": [
+      {
+        "file": "attachments/email_013_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_013_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_013_SI.txt",
+    "selected_BL": "attachments/email_013_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_016",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_018",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_025",
+    "attachments": [
+      {
+        "file": "attachments/email_025_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_025_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_025_SI.txt",
+    "selected_BL": "attachments/email_025_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_031",
+    "attachments": [
+      {
+        "file": "attachments/email_031_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_031_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_031_SI.txt",
+    "selected_BL": "attachments/email_031_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_032",
+    "attachments": [
+      {
+        "file": "attachments/email_032_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_032_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_032_SI.txt",
+    "selected_BL": "attachments/email_032_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_034",
+    "attachments": [
+      {
+        "file": "attachments/email_034_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_034_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_034_SI.txt",
+    "selected_BL": "attachments/email_034_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_036",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_038",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_040",
+    "attachments": [
+      {
+        "file": "attachments/email_040_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_040_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_040_SI.txt",
+    "selected_BL": "attachments/email_040_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_043",
+    "attachments": [
+      {
+        "file": "attachments/email_043_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_043_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_043_SI.txt",
+    "selected_BL": "attachments/email_043_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_044",
+    "attachments": [
+      {
+        "file": "attachments/email_044_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_044_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_044_SI.txt",
+    "selected_BL": "attachments/email_044_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_046",
+    "attachments": [
+      {
+        "file": "attachments/email_046_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_046_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_046_SI.txt",
+    "selected_BL": "attachments/email_046_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_047",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_049",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_050",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_051",
+    "attachments": [
+      {
+        "file": "attachments/email_051_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_051_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_051_SI.txt",
+    "selected_BL": "attachments/email_051_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_052",
+    "attachments": [
+      {
+        "file": "attachments/email_052_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_052_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_052_SI.txt",
+    "selected_BL": "attachments/email_052_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_055",
+    "attachments": [
+      {
+        "file": "attachments/email_055_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_055_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_055_SI.xlsx",
+    "selected_BL": "attachments/email_055_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_056",
+    "attachments": [
+      {
+        "file": "attachments/email_056_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_056_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_056_SI.txt",
+    "selected_BL": "attachments/email_056_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_058",
+    "attachments": [
+      {
+        "file": "attachments/email_058_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_058_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_058_SI.txt",
+    "selected_BL": "attachments/email_058_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_059",
+    "attachments": [
+      {
+        "file": "attachments/email_059_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_059_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_059_SI.pdf",
+    "selected_BL": "attachments/email_059_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_061",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_063",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_064",
+    "attachments": [
+      {
+        "file": "attachments/email_064_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_064_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_064_SI.txt",
+    "selected_BL": "attachments/email_064_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_065",
+    "attachments": [
+      {
+        "file": "attachments/email_065_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_065_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_065_SI.txt",
+    "selected_BL": "attachments/email_065_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_066",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_068",
+    "attachments": [
+      {
+        "file": "attachments/email_068_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_068_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_068_SI.txt",
+    "selected_BL": "attachments/email_068_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_071",
+    "attachments": [
+      {
+        "file": "attachments/email_071_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_071_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_071_SI.txt",
+    "selected_BL": "attachments/email_071_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_077",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_080",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_081",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_082",
+    "attachments": [
+      {
+        "file": "attachments/email_082_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_082_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_082_SI.txt",
+    "selected_BL": "attachments/email_082_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_088",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_090",
+    "attachments": [
+      {
+        "file": "attachments/email_090_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_090_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_090_SI.txt",
+    "selected_BL": "attachments/email_090_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_091",
+    "attachments": [
+      {
+        "file": "attachments/email_091_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_091_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_091_SI.txt",
+    "selected_BL": "attachments/email_091_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_092",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_095",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_096",
+    "attachments": [
+      {
+        "file": "attachments/email_096_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_096_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_096_SI.txt",
+    "selected_BL": "attachments/email_096_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_097",
+    "attachments": [
+      {
+        "file": "attachments/email_097_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_097_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_097_SI.xlsx",
+    "selected_BL": "attachments/email_097_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_100",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_105",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_107",
+    "attachments": [
+      {
+        "file": "attachments/email_107_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_107_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_107_SI.xlsx",
+    "selected_BL": "attachments/email_107_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_109",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_111",
+    "attachments": [
+      {
+        "file": "attachments/email_111_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_111_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_111_SI.txt",
+    "selected_BL": "attachments/email_111_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_113",
+    "attachments": [
+      {
+        "file": "attachments/email_113_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_113_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_113_SI.txt",
+    "selected_BL": "attachments/email_113_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_114",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_118",
+    "attachments": [
+      {
+        "file": "attachments/email_118_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_118_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_118_SI.txt",
+    "selected_BL": "attachments/email_118_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_119",
+    "attachments": [
+      {
+        "file": "attachments/email_119_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_119_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_119_SI.txt",
+    "selected_BL": "attachments/email_119_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_121",
+    "attachments": [
+      {
+        "file": "attachments/email_121_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_121_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_121_SI.txt",
+    "selected_BL": "attachments/email_121_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_128",
+    "attachments": [
+      {
+        "file": "attachments/email_128_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_128_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_128_SI.txt",
+    "selected_BL": "attachments/email_128_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_129",
+    "attachments": [
+      {
+        "file": "attachments/email_129_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_129_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_129_SI.txt",
+    "selected_BL": "attachments/email_129_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_132",
+    "attachments": [
+      {
+        "file": "attachments/email_132_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_132_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_132_SI.txt",
+    "selected_BL": "attachments/email_132_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_133",
+    "attachments": [
+      {
+        "file": "attachments/email_133_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_133_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_133_SI.txt",
+    "selected_BL": "attachments/email_133_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_136",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_141",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_143",
+    "attachments": [
+      {
+        "file": "attachments/email_143_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_143_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_143_SI.txt",
+    "selected_BL": "attachments/email_143_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_144",
+    "attachments": [
+      {
+        "file": "attachments/email_144_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_144_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_144_SI.txt",
+    "selected_BL": "attachments/email_144_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_145",
+    "attachments": [
+      {
+        "file": "attachments/email_145_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_145_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_145_SI.txt",
+    "selected_BL": "attachments/email_145_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_146",
+    "attachments": [
+      {
+        "file": "attachments/email_146_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_146_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_146_SI.txt",
+    "selected_BL": "attachments/email_146_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_152",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_158",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_160",
+    "attachments": [
+      {
+        "file": "attachments/email_160_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_160_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_160_SI.pdf",
+    "selected_BL": "attachments/email_160_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_161",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_167",
+    "attachments": [
+      {
+        "file": "attachments/email_167_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_167_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_167_SI.txt",
+    "selected_BL": "attachments/email_167_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_171",
+    "attachments": [
+      {
+        "file": "attachments/email_171_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_171_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_171_SI.xlsx",
+    "selected_BL": "attachments/email_171_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_174",
+    "attachments": [
+      {
+        "file": "attachments/email_174_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_174_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_174_SI.txt",
+    "selected_BL": "attachments/email_174_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_175",
+    "attachments": [
+      {
+        "file": "attachments/email_175_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_175_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_175_SI.txt",
+    "selected_BL": "attachments/email_175_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_176",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_178",
+    "attachments": [
+      {
+        "file": "attachments/email_178_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_178_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_178_SI.txt",
+    "selected_BL": "attachments/email_178_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_182",
+    "attachments": [
+      {
+        "file": "attachments/email_182_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_182_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_182_SI.txt",
+    "selected_BL": "attachments/email_182_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_186",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_187",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_189",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_190",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_195",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_197",
+    "attachments": [
+      {
+        "file": "attachments/email_197_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_197_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_197_SI.txt",
+    "selected_BL": "attachments/email_197_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_198",
+    "attachments": [
+      {
+        "file": "attachments/email_198_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_198_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_198_SI.txt",
+    "selected_BL": "attachments/email_198_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_199",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_207",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_208",
+    "attachments": [
+      {
+        "file": "attachments/email_208_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_208_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_208_SI.pdf",
+    "selected_BL": "attachments/email_208_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_210",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_220",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_223",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_225",
+    "attachments": [
+      {
+        "file": "attachments/email_225_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_225_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_225_SI.txt",
+    "selected_BL": "attachments/email_225_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_227",
+    "attachments": [
+      {
+        "file": "attachments/email_227_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_227_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_227_SI.txt",
+    "selected_BL": "attachments/email_227_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_229",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_235",
+    "attachments": [
+      {
+        "file": "attachments/email_235_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_235_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_235_SI.txt",
+    "selected_BL": "attachments/email_235_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_237",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_239",
+    "attachments": [
+      {
+        "file": "attachments/email_239_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_239_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_239_SI.txt",
+    "selected_BL": "attachments/email_239_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_242",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_243",
+    "attachments": [
+      {
+        "file": "attachments/email_243_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_243_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_243_SI.xlsx",
+    "selected_BL": "attachments/email_243_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_247",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_249",
+    "attachments": [
+      {
+        "file": "attachments/email_249_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_249_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_249_SI.txt",
+    "selected_BL": "attachments/email_249_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_250",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_256",
+    "attachments": [
+      {
+        "file": "attachments/email_256_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_256_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_256_SI.txt",
+    "selected_BL": "attachments/email_256_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_259",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_261",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_263",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_265",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_270",
+    "attachments": [
+      {
+        "file": "attachments/email_270_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_270_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_270_SI.txt",
+    "selected_BL": "attachments/email_270_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_271",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_273",
+    "attachments": [
+      {
+        "file": "attachments/email_273_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_273_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_273_SI.pdf",
+    "selected_BL": "attachments/email_273_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_275",
+    "attachments": [
+      {
+        "file": "attachments/email_275_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_275_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_275_SI.txt",
+    "selected_BL": "attachments/email_275_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_281",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_282",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_288",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_291",
+    "attachments": [
+      {
+        "file": "attachments/email_291_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_291_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_291_SI.xlsx",
+    "selected_BL": "attachments/email_291_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_292",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_296",
+    "attachments": [
+      {
+        "file": "attachments/email_296_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_296_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_296_SI.txt",
+    "selected_BL": "attachments/email_296_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_299",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_300",
+    "attachments": [
+      {
+        "file": "attachments/email_300_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_300_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_300_SI.xlsx",
+    "selected_BL": "attachments/email_300_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_301",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_302",
+    "attachments": [
+      {
+        "file": "attachments/email_302_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_302_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_302_SI.xlsx",
+    "selected_BL": "attachments/email_302_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_305",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_307",
+    "attachments": [
+      {
+        "file": "attachments/email_307_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_307_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_307_SI.txt",
+    "selected_BL": "attachments/email_307_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_309",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_312",
+    "attachments": [
+      {
+        "file": "attachments/email_312_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_312_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_312_SI.txt",
+    "selected_BL": "attachments/email_312_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_313",
+    "attachments": [
+      {
+        "file": "attachments/email_313_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_313_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_313_SI.pdf",
+    "selected_BL": "attachments/email_313_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_318",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_319",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_321",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_324",
+    "attachments": [
+      {
+        "file": "attachments/email_324_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_324_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_324_SI.txt",
+    "selected_BL": "attachments/email_324_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_326",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_334",
+    "attachments": [
+      {
+        "file": "attachments/email_334_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_334_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_334_SI.txt",
+    "selected_BL": "attachments/email_334_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_335",
+    "attachments": [
+      {
+        "file": "attachments/email_335_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_335_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_335_SI.txt",
+    "selected_BL": "attachments/email_335_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_337",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_341",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_342",
+    "attachments": [
+      {
+        "file": "attachments/email_342_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_342_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_342_SI.txt",
+    "selected_BL": "attachments/email_342_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_343",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_348",
+    "attachments": [
+      {
+        "file": "attachments/email_348_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_348_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_348_SI.txt",
+    "selected_BL": "attachments/email_348_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_349",
+    "attachments": [
+      {
+        "file": "attachments/email_349_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_349_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_349_SI.txt",
+    "selected_BL": "attachments/email_349_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_350",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_351",
+    "attachments": [
+      {
+        "file": "attachments/email_351_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_351_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_351_SI.pdf",
+    "selected_BL": "attachments/email_351_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_354",
+    "attachments": [
+      {
+        "file": "attachments/email_354_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_354_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_354_SI.xlsx",
+    "selected_BL": "attachments/email_354_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_361",
+    "attachments": [
+      {
+        "file": "attachments/email_361_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_361_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_361_SI.txt",
+    "selected_BL": "attachments/email_361_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_364",
+    "attachments": [
+      {
+        "file": "attachments/email_364_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_364_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_364_SI.txt",
+    "selected_BL": "attachments/email_364_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_367",
+    "attachments": [
+      {
+        "file": "attachments/email_367_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_367_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_367_SI.txt",
+    "selected_BL": "attachments/email_367_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_377",
+    "attachments": [
+      {
+        "file": "attachments/email_377_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_377_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_377_SI.txt",
+    "selected_BL": "attachments/email_377_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_378",
+    "attachments": [
+      {
+        "file": "attachments/email_378_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_378_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_378_SI.txt",
+    "selected_BL": "attachments/email_378_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_379",
+    "attachments": [
+      {
+        "file": "attachments/email_379_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_379_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_379_SI.txt",
+    "selected_BL": "attachments/email_379_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_381",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_383",
+    "attachments": [
+      {
+        "file": "attachments/email_383_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_383_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_383_SI.txt",
+    "selected_BL": "attachments/email_383_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_384",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_385",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_391",
+    "attachments": [
+      {
+        "file": "attachments/email_391_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_391_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_391_SI.txt",
+    "selected_BL": "attachments/email_391_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_398",
+    "attachments": [
+      {
+        "file": "attachments/email_398_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_398_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_398_SI.xlsx",
+    "selected_BL": "attachments/email_398_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_401",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_405",
+    "attachments": [
+      {
+        "file": "attachments/email_405_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_405_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_405_SI.txt",
+    "selected_BL": "attachments/email_405_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_407",
+    "attachments": [
+      {
+        "file": "attachments/email_407_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_407_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_407_SI.pdf",
+    "selected_BL": "attachments/email_407_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_408",
+    "attachments": [
+      {
+        "file": "attachments/email_408_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_408_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_408_SI.txt",
+    "selected_BL": "attachments/email_408_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_409",
+    "attachments": [
+      {
+        "file": "attachments/email_409_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_409_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_409_SI.txt",
+    "selected_BL": "attachments/email_409_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_410",
+    "attachments": [
+      {
+        "file": "attachments/email_410_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_410_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_410_SI.txt",
+    "selected_BL": "attachments/email_410_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_411",
+    "attachments": [
+      {
+        "file": "attachments/email_411_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_411_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_411_SI.pdf",
+    "selected_BL": "attachments/email_411_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_416",
+    "attachments": [
+      {
+        "file": "attachments/email_416_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_416_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_416_SI.txt",
+    "selected_BL": "attachments/email_416_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_419",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_421",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_423",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_424",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_426",
+    "attachments": [
+      {
+        "file": "attachments/email_426_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_426_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_426_SI.txt",
+    "selected_BL": "attachments/email_426_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_428",
+    "attachments": [
+      {
+        "file": "attachments/email_428_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_428_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_428_SI.txt",
+    "selected_BL": "attachments/email_428_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_432",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_434",
+    "attachments": [
+      {
+        "file": "attachments/email_434_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_434_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_434_SI.pdf",
+    "selected_BL": "attachments/email_434_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_435",
+    "attachments": [
+      {
+        "file": "attachments/email_435_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_435_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_435_SI.xlsx",
+    "selected_BL": "attachments/email_435_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_436",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_440",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_442",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_444",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_446",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_447",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_448",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_451",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_453",
+    "attachments": [
+      {
+        "file": "attachments/email_453_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_453_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_453_SI.txt",
+    "selected_BL": "attachments/email_453_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_454",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_456",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_459",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_462",
+    "attachments": [
+      {
+        "file": "attachments/email_462_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_462_BL.docx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_462_SI.xlsx",
+    "selected_BL": "attachments/email_462_BL.docx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_465",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_468",
+    "attachments": [
+      {
+        "file": "attachments/email_468_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_468_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_468_SI.txt",
+    "selected_BL": "attachments/email_468_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_474",
+    "attachments": [
+      {
+        "file": "attachments/email_474_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_474_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_474_SI.txt",
+    "selected_BL": "attachments/email_474_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_476",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_479",
+    "attachments": [
+      {
+        "file": "attachments/email_479_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_479_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_479_SI.txt",
+    "selected_BL": "attachments/email_479_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_480",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_481",
+    "attachments": [
+      {
+        "file": "attachments/email_481_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_481_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_481_SI.xlsx",
+    "selected_BL": "attachments/email_481_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_482",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_483",
+    "attachments": [
+      {
+        "file": "attachments/email_483_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_483_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_483_SI.txt",
+    "selected_BL": "attachments/email_483_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_486",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_491",
+    "attachments": [
+      {
+        "file": "attachments/email_491_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_491_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_491_SI.txt",
+    "selected_BL": "attachments/email_491_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_493",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_494",
+    "attachments": [
+      {
+        "file": "attachments/email_494_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_494_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_494_SI.txt",
+    "selected_BL": "attachments/email_494_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_495",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_496",
+    "attachments": [
+      {
+        "file": "attachments/email_496_SI.xlsx",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Excel sheet named 'S.I.' (+8.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_496_BL.xlsx",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Bill of Lading (+8.0 BL)",
+          "Excel sheet named 'BL' (+8.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_496_SI.xlsx",
+    "selected_BL": "attachments/email_496_BL.xlsx",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_498",
+    "attachments": [
+      {
+        "file": "attachments/email_498_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_498_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_498_SI.txt",
+    "selected_BL": "attachments/email_498_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_499",
+    "attachments": [
+      {
+        "file": "attachments/email_499_SI.pdf",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      },
+      {
+        "file": "attachments/email_499_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_499_SI.pdf",
+    "selected_BL": "attachments/email_499_BL.pdf",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_501",
+    "attachments": [
+      {
+        "file": "attachments/email_501_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_501_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 1.0,
+        "evidence": [
+          "Content mentions 'commercial invoice' (+10.0 OTHER)",
+          "Content mentions 'not a shipping instruction' (+12.0 OTHER)",
+          "Content mentions 'unit price' (+5.0 OTHER)",
+          "Filename indicates BL (+3.0 BL)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_501_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "wrong_doc_type"
+  },
+  {
+    "email_id": "email_502",
+    "attachments": [
+      {
+        "file": "attachments/email_502_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_502_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 1.0,
+        "evidence": [
+          "Content mentions 'packing list' (+10.0 OTHER)",
+          "Content mentions 'packing list only' (+12.0 OTHER)",
+          "Content mentions 'carton no' (+5.0 OTHER)",
+          "Filename indicates BL (+3.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_502_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "wrong_doc_type"
+  },
+  {
+    "email_id": "email_503",
+    "attachments": [
+      {
+        "file": "attachments/email_503_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_503_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 1.0,
+        "evidence": [
+          "Content mentions 'certificate of origin' (+10.0 OTHER)",
+          "Content mentions 'not an si or bl' (+12.0 OTHER)",
+          "Content mentions 'country of origin' (+5.0 OTHER)",
+          "Filename indicates BL (+3.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_503_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "wrong_doc_type"
+  },
+  {
+    "email_id": "email_504",
+    "attachments": [
+      {
+        "file": "attachments/email_504_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_504_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 1.0,
+        "evidence": [
+          "Content mentions 'packing list' (+10.0 OTHER)",
+          "Content mentions 'packing list only' (+12.0 OTHER)",
+          "Content mentions 'carton no' (+5.0 OTHER)",
+          "Filename indicates BL (+3.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_504_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "wrong_doc_type"
+  },
+  {
+    "email_id": "email_505",
+    "attachments": [
+      {
+        "file": "attachments/email_505_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_505_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 1.0,
+        "evidence": [
+          "Content mentions 'certificate of origin' (+10.0 OTHER)",
+          "Content mentions 'not an si or bl' (+12.0 OTHER)",
+          "Content mentions 'country of origin' (+5.0 OTHER)",
+          "Filename indicates BL (+3.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_505_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "wrong_doc_type"
+  },
+  {
+    "email_id": "email_506",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "missing_attachment"
+  },
+  {
+    "email_id": "email_507",
+    "attachments": [
+      {
+        "file": "attachments/email_507_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_507_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "missing_attachment"
+  },
+  {
+    "email_id": "email_508",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "missing_attachment"
+  },
+  {
+    "email_id": "email_509",
+    "attachments": [
+      {
+        "file": "attachments/email_509_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_509_SI.txt",
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "missing_attachment"
+  },
+  {
+    "email_id": "email_510",
+    "attachments": [],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "missing_attachment"
+  },
+  {
+    "email_id": "email_511",
+    "attachments": [
+      {
+        "file": "attachments/email_511_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_511_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: corrupt_or_garbled_pdf: Stream has ended unexpectedly"
+        ]
+      }
+    ],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "unreadable"
+  },
+  {
+    "email_id": "email_512",
+    "attachments": [
+      {
+        "file": "attachments/email_512_SI.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: scanned_or_image_only"
+        ]
+      },
+      {
+        "file": "attachments/email_512_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: scanned_or_image_only"
+        ]
+      }
+    ],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "unreadable"
+  },
+  {
+    "email_id": "email_513",
+    "attachments": [
+      {
+        "file": "attachments/email_513_SI.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: scanned_or_image_only"
+        ]
+      },
+      {
+        "file": "attachments/email_513_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: scanned_or_image_only"
+        ]
+      }
+    ],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "unreadable"
+  },
+  {
+    "email_id": "email_514",
+    "attachments": [
+      {
+        "file": "attachments/email_514_SI.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: scanned_or_image_only"
+        ]
+      },
+      {
+        "file": "attachments/email_514_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: scanned_or_image_only"
+        ]
+      }
+    ],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "unreadable"
+  },
+  {
+    "email_id": "email_515",
+    "attachments": [
+      {
+        "file": "attachments/email_515_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_515_BL.pdf",
+        "SI_probability": 0.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 1.0,
+        "selected_type": "OTHER",
+        "confidence": 0.0,
+        "evidence": [
+          "Extraction failed: corrupt_or_garbled_pdf: Stream has ended unexpectedly"
+        ]
+      }
+    ],
+    "selected_SI": null,
+    "selected_BL": null,
+    "status": "NEEDS_REVIEW",
+    "review_reason": "unreadable"
+  },
+  {
+    "email_id": "email_516",
+    "attachments": [
+      {
+        "file": "attachments/email_516_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_516_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_516_SI.txt",
+    "selected_BL": "attachments/email_516_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_517",
+    "attachments": [
+      {
+        "file": "attachments/email_517_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_517_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_517_SI.txt",
+    "selected_BL": "attachments/email_517_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_518",
+    "attachments": [
+      {
+        "file": "attachments/email_518_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_518_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_518_SI.txt",
+    "selected_BL": "attachments/email_518_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_519",
+    "attachments": [
+      {
+        "file": "attachments/email_519_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_519_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_519_SI.txt",
+    "selected_BL": "attachments/email_519_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  },
+  {
+    "email_id": "email_520",
+    "attachments": [
+      {
+        "file": "attachments/email_520_SI.txt",
+        "SI_probability": 1.0,
+        "BL_probability": 0.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "SI",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates SI (+3.0 SI)",
+          "Header indicates Shipping Instruction (+10.0 SI)",
+          "Mentions 'shipping instruction' (+4.0 SI)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      },
+      {
+        "file": "attachments/email_520_BL.txt",
+        "SI_probability": 0.0,
+        "BL_probability": 1.0,
+        "OTHER_probability": 0.0,
+        "selected_type": "BL",
+        "confidence": 1.0,
+        "evidence": [
+          "Filename indicates BL (+3.0 BL)",
+          "Header indicates Draft Bill of Lading (+10.0 BL)",
+          "Contains 'B/L No.' (+4.0 BL)",
+          "Contains cargo description (+2.0 BL, +1.0 SI)"
+        ]
+      }
+    ],
+    "selected_SI": "attachments/email_520_SI.txt",
+    "selected_BL": "attachments/email_520_BL.txt",
+    "status": "OK",
+    "review_reason": null
+  }
+]
