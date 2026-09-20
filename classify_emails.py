@@ -23,21 +23,47 @@ CLASSIFICATION_RULES = {
             "identify discrepancies",
             "any discrepancy",
             "document verification",
+            # Subject patterns from actual data
+            "to confirm docs",
+            "confirm docs",
+            "request bl draft",
+            "amend bl",
+            # Body patterns from actual data
+            "send the draft bl",
+            "draft bl for checking",
+            "confirm the bl is in order",
+            "check the details and confirm",
+            "verify the bl matches",
+            "confirm bl is in order",
+            "kindly confirm the bl",
+            "the bl will not open",
+            "bl is still missing",
+            "si and draft bl",
+            "si and the draft bl",
+            "si and bl for",
+            "si and draft bill of lading",
+            "shipping instruction and the draft bill of lading",
         ),
         "comparison_words": ("compare", "discrepancy", "discrepancies", "verify", "matches"),
-        "document_words": ("shipping instruction", "bill of lading", "draft bl", " si "),
+        "document_words": ("shipping instruction", "bill of lading", "draft bl", " si ", " bl "),
+        # Subject-only pattern: coded DEPT-PORT-CARRIER(BLNO) format
+        "subject_patterns": (
+            "draft bl",
+        ),
     },
     "SI_REQUEST": {
         "phrases": (
-            "si needed",
-            "cust si",
-            "customer si",
-            "new si request",
-            "prepare the shipping instruction",
-            "prepare shipping instruction",
-            "create shipping instruction",
+            "please provide the shipping instruction",
+            "requesting shipping instruction",
+            "submit the si",
             "submit si",
-            "send shipping instructions",
+            "si is required",
+            "urgently require the si",
+            "request si",
+            "cust si",
+            "si needed",
+            "latest si",
+            "please find shipping instruction for",
         ),
     },
     "INVOICE_QUERY": {
@@ -125,6 +151,13 @@ def score_categories(email: dict[str, Any], attachment_signals: dict[str, Any]) 
     if comparison_words and any(word in text for word in CLASSIFICATION_RULES["BL_COMPARISON"]["document_words"]):
         scores["BL_COMPARISON"] += 2.0 * len(comparison_words)
         matched.extend(f"comparison word: {word}" for word in comparison_words)
+        
+    # Check for coded subject pattern: DEPT - PORT - CARRIER(BL_NO) - ...
+    raw_subject = email.get("subject", "")
+    if re.search(r'[A-Za-z]{3,4}\s*\([A-Za-z0-9]{10,15}\)', raw_subject) and " - " in raw_subject:
+        scores["BL_COMPARISON"] += 10.0
+        matched.append("coded subject pattern")
+        
     if attachment_signals["has_si_bl_pair"]:
         scores["BL_COMPARISON"] += 5.0
         matched.append("SI and BL attachment pair")
