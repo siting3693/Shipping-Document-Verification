@@ -1,193 +1,51 @@
 #!/usr/bin/env python3
-"""Stage 1 classifier for the SDOC hackathon inbox."""
+"""Stage 1 hybrid email classifier for the SDOC hackathon inbox.
 
-import json
-import re
+Combines Gemini Flash semantic classification with an enhanced rule-based
+classifier for high-reliability validation, fallback, and conflict resolution.
+"""
+
 from collections import Counter
+import json
 from pathlib import Path
 from typing import Any
 
 from loader import Inbox
+from classification.rule_classifier import (
+    CATEGORIES,
+    CLASSIFICATION_RULES,
+    preprocess_text,
+    normalize_attachment_name,
+    extract_attachment_signals,
+    score_categories,
+    RuleClassifier,
+)
+from classification.gemini_classifier import GeminiClassifier
+from classification.hybrid_classifier import HybridClassifier, classify_email
 
 
-CATEGORIES = ("BL_COMPARISON", "SI_REQUEST", "INVOICE_QUERY", "GENERAL", "SPAM")
-
-CLASSIFICATION_RULES = {
-    "BL_COMPARISON": {
-        "explicit_phrases": (
-            "compare the si and draft bl",
-            "check the draft bl against the si",
-            "check whether the bl matches the si",
-            "verify the bl matches the si",
-            "check shipping instruction against bill of lading",
-            "identify discrepancies",
-            "any discrepancy",
-            "document verification",
-        ),
-        "comparison_words": ("compare", "discrepancy", "discrepancies", "verify", "matches"),
-        "document_words": ("shipping instruction", "bill of lading", "draft bl", " si "),
-    },
-    "SI_REQUEST": {
-        "phrases": (
-            "si needed",
-            "cust si",
-            "customer si",
-            "new si request",
-            "prepare the shipping instruction",
-            "prepare shipping instruction",
-            "create shipping instruction",
-            "submit si",
-            "send shipping instructions",
-        ),
-    },
-    "INVOICE_QUERY": {
-        "phrases": (
-            "query on invoice",
-            "cancel invoice",
-            "invoice status",
-            "invoice correction",
-            "missing gr",
-            "detention charges",
-            "d&d charges",
-            "local charge",
-            "thc",
-            "release payment",
-        ),
-        "words": ("invoice", "invoicing", "billing", "payment", "charge", "charges"),
-    },
-    "SPAM": {
-        "phrases": (
-            "bitcoin investment",
-            "guaranteed 300%",
-            "unpaid customs fee",
-            "confirm payment within 24 hours",
-            "exclusive offer",
-            "limited time offer",
-            "90% off",
-            "update your account to avoid suspension",
-            "hot singles",
-            "weird trick",
-            "email storage is full",
-            "verify account immediately",
-        ),
-        "suspicious_domains": (
-            "secure-mailbox.org",
-            "webmail-verify.co",
-            "parcel-track.co",
-            "logistics-deals.biz",
-            "crypto-invest.net",
-        ),
-    },
-}
-
-
-def preprocess_text(*parts: Any) -> str:
-    """Return normalized text while retaining word boundaries for phrase rules."""
-    text = " ".join(str(part or "") for part in parts)
-    text = text.casefold().replace("&", " and ")
-    return re.sub(r"[^a-z0-9]+", " ", text).strip()
-
-
-def normalize_attachment_name(path: str) -> str:
-    return preprocess_text(Path(path).stem)
-
-
-def extract_attachment_signals(attachments: list[str]) -> dict[str, Any]:
-    names = [normalize_attachment_name(path) for path in attachments]
-    has_si = any(re.search(r"(?:^| )si(?: |$)|shipping instruction", name) for name in names)
-    has_bl = any(re.search(r"(?:^| )bl(?: |$)|bill of lading", name) for name in names)
-    return {
-        "normalized_names": names,
-        "has_si_attachment": has_si,
-        "has_bl_attachment": has_bl,
-        "has_si_bl_pair": has_si and has_bl,
-        "attachment_types": sorted({Path(path).suffix.casefold().lstrip(".") for path in attachments}),
-    }
-
-
-def _matches(text: str, rules: tuple[str, ...]) -> list[str]:
-    return [rule for rule in rules if rule in text]
-
-
-def score_categories(email: dict[str, Any], attachment_signals: dict[str, Any]) -> tuple[dict[str, float], list[str]]:
-    subject = preprocess_text(email.get("subject"))
-    body = preprocess_text(email.get("body"))
-    sender = preprocess_text(email.get("from"))
-    text = f"{subject} {body}"
-    scores = {category: 0.0 for category in CATEGORIES}
-    matched: list[str] = []
-
-    comparison_hits = _matches(text, CLASSIFICATION_RULES["BL_COMPARISON"]["explicit_phrases"])
-    if comparison_hits:
-        scores["BL_COMPARISON"] += 8.0 * len(comparison_hits)
-        matched.extend(f"comparison phrase: {hit}" for hit in comparison_hits)
-    comparison_words = _matches(text, CLASSIFICATION_RULES["BL_COMPARISON"]["comparison_words"])
-    if comparison_words and any(word in text for word in CLASSIFICATION_RULES["BL_COMPARISON"]["document_words"]):
-        scores["BL_COMPARISON"] += 2.0 * len(comparison_words)
-        matched.extend(f"comparison word: {word}" for word in comparison_words)
-    if attachment_signals["has_si_bl_pair"]:
-        scores["BL_COMPARISON"] += 5.0
-        matched.append("SI and BL attachment pair")
-        if any(word in text for word in ("check", "confirm", "review", "verify", "match")):
-            scores["BL_COMPARISON"] += 3.0
-            matched.append("document review request")
-
-    si_hits = _matches(text, CLASSIFICATION_RULES["SI_REQUEST"]["phrases"])
-    if si_hits:
-        scores["SI_REQUEST"] += 7.0 * len(si_hits)
-        matched.extend(f"SI request: {hit}" for hit in si_hits)
-    if "shipping instruction" in text and any(word in text for word in ("prepare", "create", "request", "needed", "submit", "send")):
-        scores["SI_REQUEST"] += 4.0
-        matched.append("new shipping instruction request")
-
-    invoice_hits = _matches(text, CLASSIFICATION_RULES["INVOICE_QUERY"]["phrases"])
-    invoice_words = _matches(text, CLASSIFICATION_RULES["INVOICE_QUERY"]["words"])
-    if invoice_hits:
-        scores["INVOICE_QUERY"] += 6.0 * len(invoice_hits)
-        matched.extend(f"invoice phrase: {hit}" for hit in invoice_hits)
-    if invoice_words:
-        scores["INVOICE_QUERY"] += 2.0 * len(invoice_words)
-        matched.extend(f"invoice term: {word}" for word in invoice_words)
-
-    spam_hits = _matches(text, CLASSIFICATION_RULES["SPAM"]["phrases"])
-    if spam_hits:
-        scores["SPAM"] += 8.0 * len(spam_hits)
-        matched.extend(f"spam phrase: {hit}" for hit in spam_hits)
-    for domain in CLASSIFICATION_RULES["SPAM"]["suspicious_domains"]:
-        if domain in sender:
-            scores["SPAM"] += 4.0
-            matched.append(f"suspicious sender domain: {domain}")
-
-    # A clear comparison request wins over incidental SI or invoice vocabulary.
-    if scores["BL_COMPARISON"] >= 8:
-        scores["SI_REQUEST"] *= 0.25
-        scores["INVOICE_QUERY"] *= 0.5
-    return scores, matched
-
-
-def classify_email(email: dict[str, Any], inbox: Inbox) -> dict[str, Any]:
-    attachment_signals = extract_attachment_signals(email.get("attachments", []))
-    scores, matched = score_categories(email, attachment_signals)
-    ranked = sorted(CATEGORIES, key=lambda category: (scores[category], category), reverse=True)
-    category = ranked[0] if scores[ranked[0]] >= 4.0 else "GENERAL"
-    return {
-        "category": category,
-        "scores": scores,
-        "matched_rules": matched,
-        "attachment_signals": attachment_signals,
-    }
-
-
-def validate_submission(submission: dict[str, dict[str, Any]], emails: list[dict[str, Any]], sample: dict[str, Any]) -> None:
+def validate_submission(
+    submission: dict[str, dict[str, Any]],
+    emails: list[dict[str, Any]],
+    sample: dict[str, Any],
+) -> None:
+    """Ensure submission strictly conforms to hackathon requirements."""
     input_ids = [email["email_id"] for email in emails]
     if len(input_ids) != len(set(input_ids)):
         raise ValueError("Input email IDs are not unique")
     if set(submission) != set(input_ids):
-        raise ValueError("Submission email IDs do not exactly match the inbox")
+        missing = set(input_ids) - set(submission)
+        extra = set(submission) - set(input_ids)
+        raise ValueError(f"Submission email IDs mismatch. Missing: {len(missing)}, Extra: {len(extra)}")
+
     expected_fields = set(next(iter(sample.values())))
     for email_id, result in submission.items():
         if set(result) != expected_fields:
-            raise ValueError(f"Unexpected output fields for {email_id}")
+            extra_f = set(result) - expected_fields
+            missing_f = expected_fields - set(result)
+            raise ValueError(
+                f"Field mismatch for {email_id}. Extra: {extra_f}, Missing: {missing_f}"
+            )
         if result["category"] not in CATEGORIES:
             raise ValueError(f"Invalid category for {email_id}: {result['category']}")
 
@@ -196,34 +54,104 @@ def main() -> None:
     inbox = Inbox(".")
     emails = list(inbox)
     sample = inbox.sample_submission()
+
+    print(f"Loaded {len(emails)} emails from inbox.")
+
+    # Initialize classifiers
+    gemini = GeminiClassifier()
+    rules = RuleClassifier()
+    hybrid = HybridClassifier(gemini_classifier=gemini, rule_classifier=rules)
+
+    if gemini.is_available:
+        print(f"Using Gemini model: {gemini.model} as primary classifier.")
+        print("Running batch semantic classification via Gemini Flash...")
+        gemini_results = gemini.batch_classify(emails, max_workers=5)
+    else:
+        print("NOTE: GEMINI_API_KEY is not set or empty.")
+        print("Operating in rule fallback mode (using enhanced rule-based classifier).")
+        gemini_results = {
+            e["email_id"]: {
+                "success": False,
+                "error": "GEMINI_API_KEY not set",
+                "result": None,
+            }
+            for e in emails
+        }
+
     submission: dict[str, dict[str, Any]] = {}
     debug: list[dict[str, Any]] = []
+
+    gemini_count = 0
+    fallback_count = 0
+    disagreement_count = 0
+    low_confidence_count = 0
+
     for email in emails:
-        decision = classify_email(email, inbox)
-        submission[email["email_id"]] = {
-            "category": decision["category"],
+        eid = email["email_id"]
+        g_resp = gemini_results.get(eid)
+        decision = hybrid.decide(email, gemini_response=g_resp)
+
+        # Update tracking stats
+        method = decision["decision_method"]
+        if method.startswith("gemini"):
+            gemini_count += 1
+        elif method.startswith("rule_fallback"):
+            fallback_count += 1
+
+        if method == "rule_fallback_low_confidence":
+            low_confidence_count += 1
+
+        if decision["agreed"] is False:
+            disagreement_count += 1
+
+        # Strict submission format matching sample_submission.json
+        submission[eid] = {
+            "category": decision["final_category"],
             "status": "OK",
             "review_reason": None,
             "defect_fields": [],
             "has_defect": False,
         }
+
+        # Detailed debug record
         debug.append({
-            "email_id": email["email_id"],
-            "predicted_category": decision["category"],
-            "scores": decision["scores"],
-            "matched_rules": decision["matched_rules"],
-            "attachment_signals": decision["attachment_signals"],
+            "email_id": eid,
+            "final_category": decision["final_category"],
+            "decision_method": decision["decision_method"],
+            "agreed": decision["agreed"],
+            "gemini": decision["gemini"],
+            "gemini_error": decision["gemini_error"],
+            "rule": decision["rule"],
         })
 
+    # Validate output integrity
     validate_submission(submission, emails, sample)
-    Path("classified_submission.json").write_text(json.dumps(submission, indent=2) + "\n", encoding="utf-8")
-    Path("classification_debug.json").write_text(json.dumps(debug, indent=2) + "\n", encoding="utf-8")
+
+    # Write output files
+    submission_path = Path("classified_submission.json")
+    debug_path = Path("classification_debug.json")
+
+    submission_path.write_text(json.dumps(submission, indent=2) + "\n", encoding="utf-8")
+    debug_path.write_text(json.dumps(debug, indent=2) + "\n", encoding="utf-8")
+
+    # Output report
     counts = Counter(result["category"] for result in submission.values())
-    print(f"Total emails: {len(emails)}")
+    print("\n" + "=" * 55)
+    print("STAGE 1 CLASSIFICATION REPORT")
+    print("=" * 55)
+    print(f"Total emails processed         : {len(emails)}")
+    print(f"Gemini classifications used    : {gemini_count}")
+    print(f"Rule fallbacks used            : {fallback_count}")
+    print(f"Gemini/rule disagreements      : {disagreement_count}")
+    print(f"Low-confidence cases (<0.85)   : {low_confidence_count}")
+    print("-" * 55)
+    print("Category Breakdown:")
     for category in CATEGORIES:
-        print(f"{category}: {counts[category]}")
-    print("Output written to: classified_submission.json")
-    print("Debug written to: classification_debug.json")
+        print(f"  {category:<16}: {counts[category]}")
+    print("-" * 55)
+    print(f"Official output written to : {submission_path}")
+    print(f"Debug records written to   : {debug_path}")
+    print("=" * 55 + "\n")
 
 
 if __name__ == "__main__":
