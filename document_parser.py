@@ -6,11 +6,11 @@ from typing import Optional
 def detect_document_type(text: str) -> str:
     """Detect document type from header text."""
     if not text:
-        return 'UNKNOWN'
+        return 'UNREADABLE'
         
     lines = [line.strip() for line in text.split('\n') if line.strip()]
     if not lines:
-        return 'UNKNOWN'
+        return 'UNREADABLE'
         
     first_few_lines = '\n'.join(lines[:10]).upper()
     

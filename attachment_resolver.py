@@ -55,8 +55,14 @@ def resolve_attachments(email: Dict[str, Any], inbox: Any) -> Dict[str, Any]:
     attachments: List[str] = email.get('attachments', [])
     
     if not attachments:
-        result['review_reason'] = 'missing_attachment'
-        result['details'] = 'No attachments found in the email.'
+        body = email.get('body', '').lower()
+        if 'dropped' in body or 'missing' in body:
+            result['review_reason'] = 'missing_attachment'
+            result['details'] = 'No attachments found in the email (implied missing).'
+        else:
+            result['status'] = 'OK_EMPTY'
+            result['review_reason'] = None
+            result['details'] = 'No attachments, but no indication they are missing.'
         return result
         
     if len(attachments) == 1:

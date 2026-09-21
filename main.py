@@ -58,6 +58,16 @@ def process_bl_comparison(email: dict, inbox: Inbox) -> dict:
             '_details': resolution['details'],
         }
     
+    if resolution['status'] == 'OK_EMPTY':
+        logger.info(f"  {email_id}: OK — {resolution['details']}")
+        return {
+            'status': 'OK',
+            'review_reason': None,
+            'defect_fields': [],
+            'has_defect': False,
+            '_details': resolution['details'],
+        }
+    
     si_doc = resolution['si_doc']
     bl_doc = resolution['bl_doc']
     

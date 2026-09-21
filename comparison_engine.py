@@ -71,8 +71,8 @@ def compare_field(field_name: str, si_value: Any, bl_value: Any) -> dict:
     si_raw = si_value
     bl_raw = bl_value
     
-    is_missing_si = si_value is None or str(si_value).strip() == ""
-    is_missing_bl = bl_value is None or str(bl_value).strip() == ""
+    is_missing_si = si_value is None or str(si_value).strip() == "" or str(si_value).strip() in ["TBA", "TBC"] or "___" in str(si_value)
+    is_missing_bl = bl_value is None or str(bl_value).strip() == "" or str(bl_value).strip() in ["TBA", "TBC"] or "___" in str(bl_value)
     
     if is_missing_si and is_missing_bl:
         return {
@@ -91,7 +91,7 @@ def compare_field(field_name: str, si_value: Any, bl_value: Any) -> dict:
             'bl_value': None if is_missing_bl else bl_value,
             'si_raw': si_raw,
             'bl_raw': bl_raw,
-            'status': 'MISMATCH',
+            'status': 'MISSING',
             'reason': 'Missing in one document'
         }
         
@@ -213,14 +213,14 @@ def compare_documents(si_fields: dict, bl_fields: dict) -> dict:
             
     has_defect = len(defect_fields) > 0
     
-    if has_defect:
-        status = 'MISMATCH'
-        review_reason = None
-        summary = f"Documents mismatch in {len(defect_fields)} field(s)."
-    elif has_missing:
+    if has_missing:
         status = 'NEEDS_REVIEW'
         review_reason = 'missing_value'
         summary = "Some fields are missing or uncertain and require manual review."
+    elif has_defect:
+        status = 'MISMATCH'
+        review_reason = None
+        summary = f"Documents mismatch in {len(defect_fields)} field(s)."
     else:
         status = 'OK'
         has_defect = False

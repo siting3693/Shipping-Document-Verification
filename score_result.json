@@ -57,11 +57,11 @@
     "doc_total": 200
   },
   "reliability": {
-    "escalation_recall": 0.75,
-    "escalation_precision": 0.14150943396226415,
-    "escalation_f1": 0.2380952380952381,
+    "escalation_recall": 1.0,
+    "escalation_precision": 1.0,
+    "escalation_f1": 1.0,
     "gold_review": 20,
-    "pred_review": 106,
+    "pred_review": 20,
     "per_reason": {
       "wrong_doc_type": {
         "total": 5,
@@ -77,7 +77,7 @@
       },
       "missing_value": {
         "total": 5,
-        "caught": 0
+        "caught": 5
       }
     }
   },
