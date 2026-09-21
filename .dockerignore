@@ -1,0 +1,12 @@
+﻿.venv
+__pycache__
+.git
+.env
+logs/
+data_v2/ground_truth.json
+score_result.json
+submission.json
+.launcher_pids
+test_351/
+classification_debug.json
+classified_submission.json

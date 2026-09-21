@@ -61,3 +61,24 @@ You don't have the ground truth. Either:
 Final score = 50% end-to-end (defects caught all the way through) + 30% Stage-1
 macro-F1 + 20% Stage-3 defect-F1. `NEEDS_REVIEW` handling is reported as a
 separate reliability axis.
+
+## Google Cloud Run Deployment
+
+This application is designed to be deployed as a single Google Cloud Run service. The Docker container executes the verification pipeline on startup (generating the latest `submission.json`) and then serves the dashboard via FastAPI.
+
+### Deployment Steps
+1. **Set Environment Variables**: In the Cloud Run console, set `GEMINI_API_KEY` to your API key.
+2. **Deploy**:
+   ```bash
+   gcloud run deploy sdoc-verification \
+     --source . \
+     --port 8080 \
+     --allow-unauthenticated \
+     --set-env-vars="GEMINI_API_KEY=your_api_key_here"
+   ```
+
+### Security Notes
+- The `.dockerignore` file explicitly excludes `.env` and `ground_truth.json`.
+- The dashboard gracefully hides the self-evaluation section if `ground_truth.json` is missing.
+- Private endpoints (like `/submit`) return `503 Service Unavailable` if the ground truth is not mounted.
+
