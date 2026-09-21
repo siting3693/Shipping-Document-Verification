@@ -130,7 +130,24 @@ def _parse_pdf(file_path: str, content_bytes: Optional[bytes] = None) -> dict:
         # If pdfplumber extracted nothing, it might be a weird PDF, try fallback
         if not text.strip():
             raise ValueError("No text extracted by pdfplumber")
-        
+            
+        # Check for garbled OCR tokens (≥4 case transitions in a word).
+        # pdfplumber sometimes garbles overlapping font paths; pypdfium2
+        # reads the same PDFs cleanly.  This is parser-level quality
+        # control — not a change to comparison logic.
+        _has_garbled = False
+        for token in text.split():
+            alpha = ''.join(c for c in token if c.isalpha())
+            if len(alpha) >= 5:
+                transitions = sum(
+                    1 for i in range(1, len(alpha))
+                    if alpha[i - 1].isupper() != alpha[i].isupper()
+                )
+                if transitions >= 4:
+                    _has_garbled = True
+                    break
+        if _has_garbled:
+            raise ValueError("Garbled OCR tokens detected in pdfplumber output")
             
         doc_type = detect_document_type(text)
         raw_fields = _parse_text_content(text)
