@@ -65,6 +65,29 @@ def process_bl_comparison(email: dict, inbox: Inbox) -> dict:
     try:
         si_fields = extract_fields(si_doc)
         bl_fields = extract_fields(bl_doc)
+        
+        # Garbled text detection -> Gemini fallback
+        from gemini_fallback import is_garbled, extract_with_gemini
+        
+        # Check SI fields
+        if any(is_garbled(str(f.get('raw_value', ''))) for f in si_fields.values()):
+            logger.info(f"  {email_id}: Garbled text detected in SI! Triggering AI fallback...")
+            gemini_data = extract_with_gemini(inbox.read_bytes(resolution['si_path']))
+            if gemini_data:
+                for k, v in gemini_data.items():
+                    if k in si_fields:
+                        si_fields[k]['normalized_value'] = v
+                        si_fields[k]['method'] = 'gemini_fallback'
+                        
+        # Check BL fields
+        if any(is_garbled(str(f.get('raw_value', ''))) for f in bl_fields.values()):
+            logger.info(f"  {email_id}: Garbled text detected in BL! Triggering AI fallback...")
+            gemini_data = extract_with_gemini(inbox.read_bytes(resolution['bl_path']))
+            if gemini_data:
+                for k, v in gemini_data.items():
+                    if k in bl_fields:
+                        bl_fields[k]['normalized_value'] = v
+                        bl_fields[k]['method'] = 'gemini_fallback'
     except Exception as e:
         logger.error(f"  {email_id}: Field extraction failed: {e}")
         return {

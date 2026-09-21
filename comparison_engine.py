@@ -74,15 +74,25 @@ def compare_field(field_name: str, si_value: Any, bl_value: Any) -> dict:
     is_missing_si = si_value is None or str(si_value).strip() == ""
     is_missing_bl = bl_value is None or str(bl_value).strip() == ""
     
-    if is_missing_si or is_missing_bl:
+    if is_missing_si and is_missing_bl:
+        return {
+            'field': field_name,
+            'si_value': None,
+            'bl_value': None,
+            'si_raw': si_raw,
+            'bl_raw': bl_raw,
+            'status': 'MISSING',
+            'reason': 'Both values are missing'
+        }
+    elif is_missing_si or is_missing_bl:
         return {
             'field': field_name,
             'si_value': None if is_missing_si else si_value,
             'bl_value': None if is_missing_bl else bl_value,
             'si_raw': si_raw,
             'bl_raw': bl_raw,
-            'status': 'MISSING',
-            'reason': 'One or both values are missing'
+            'status': 'MISMATCH',
+            'reason': 'Missing in one document'
         }
         
     status = 'UNCERTAIN'

@@ -78,9 +78,95 @@ def _parse_text_content(text: str) -> dict:
             raw_fields[key] = value
             current_key = key
         else:
-            current_key = None
+            # Fallback for known prefixes without colons
+            lower_line = line.strip().lower()
+            prefixes = [
+                'shipper/exporter', 'shipper (principal or seller)', 'shipper', 'exporter', 'seller',
+                'consignee (non-negotiable)', 'consignee', 'to the order of', 'buyer',
+                'notify party/intermediate consignee', 'notify party', 'notify',
+                'port of loading (pol)', 'port of loading', 'load port', 'pol',
+                'port of discharge (pod)', 'port of discharge', 'discharge port', 'pod',
+                'no. of containers or packages', 'total containers', 'container count', 'no. of containers',
+                'gross weight (kg)', 'gross weight', 'gross wt (kgs)', 'gross wt', 'total gross weight'
+            ]
+            matched = False
+            for p in prefixes:
+                if lower_line.startswith(p) and len(lower_line) > len(p) and lower_line[len(p)] == ' ':
+                    key = line.strip()[:len(p)]
+                    value = line.strip()[len(p):].strip()
+                    raw_fields[key] = value
+                    current_key = key
+                    matched = True
+                    break
+            if not matched:
+                current_key = None
             
     return raw_fields
+
+def _parse_pdf(file_path: str, content_bytes: Optional[bytes] = None) -> dict:
+    if content_bytes is None:
+        try:
+            with open(file_path, 'rb') as f:
+                content_bytes = f.read()
+        except Exception as e:
+            return {
+                'doc_type': 'UNREADABLE',
+                'raw_fields': {},
+                'raw_text': "",
+                'parse_method': 'pdf',
+                'error': f"Failed to read file: {str(e)}"
+            }
+
+    try:
+        import pdfplumber
+        import io
+        text = ""
+        with pdfplumber.open(io.BytesIO(content_bytes)) as pdf:
+            for page in pdf.pages:
+                page_text = page.extract_text()
+                if page_text:
+                    text += page_text + "\n"
+        
+        # If pdfplumber extracted nothing, it might be a weird PDF, try fallback
+        if not text.strip():
+            raise ValueError("No text extracted by pdfplumber")
+            
+        doc_type = detect_document_type(text)
+        raw_fields = _parse_text_content(text)
+        return {
+            'doc_type': doc_type,
+            'raw_fields': raw_fields,
+            'raw_text': text,
+            'parse_method': 'pdf',
+            'error': None
+        }
+    except Exception as e:
+        # Fallback to pypdfium2 for corrupted PDFs like email_499_BL
+        try:
+            import pypdfium2 as pdfium
+            text = ""
+            pdf = pdfium.PdfDocument(content_bytes)
+            for i in range(len(pdf)):
+                page = pdf[i]
+                text += page.get_textpage().get_text_range() + "\n"
+            
+            doc_type = detect_document_type(text)
+            raw_fields = _parse_text_content(text)
+            return {
+                'doc_type': doc_type,
+                'raw_fields': raw_fields,
+                'raw_text': text,
+                'parse_method': 'pdf_fallback',
+                'error': None
+            }
+        except Exception as fallback_e:
+            return {
+                'doc_type': 'UNREADABLE',
+                'raw_fields': {},
+                'raw_text': "",
+                'parse_method': 'pdf',
+                'error': f"Primary error: {str(e)}, Fallback error: {str(fallback_e)}"
+            }
 
 def parse_document(file_path: str, content_bytes: Optional[bytes] = None) -> dict:
     """Parse a document file and return structured data.
@@ -121,33 +207,7 @@ def parse_document(file_path: str, content_bytes: Optional[bytes] = None) -> dic
             result['raw_fields'] = _parse_text_content(text)
             
         elif ext == '.pdf':
-            result['parse_method'] = 'pdf'
-            text = ""
-            try:
-                import pdfplumber
-                if content_bytes:
-                    with pdfplumber.open(io.BytesIO(content_bytes)) as pdf:
-                        for page in pdf.pages:
-                            text += (page.extract_text() or "") + "\n"
-                else:
-                    with pdfplumber.open(file_path) as pdf:
-                        for page in pdf.pages:
-                            text += (page.extract_text() or "") + "\n"
-            except ImportError:
-                try:
-                    import PyPDF2
-                    if content_bytes:
-                        reader = PyPDF2.PdfReader(io.BytesIO(content_bytes))
-                    else:
-                        reader = PyPDF2.PdfReader(file_path)
-                    for page in reader.pages:
-                        text += (page.extract_text() or "") + "\n"
-                except ImportError:
-                    raise ImportError("Neither pdfplumber nor PyPDF2 is installed.")
-            
-            result['raw_text'] = text
-            result['doc_type'] = detect_document_type(text)
-            result['raw_fields'] = _parse_text_content(text)
+            return _parse_pdf(file_path, content_bytes)
             
         elif ext == '.docx':
             result['parse_method'] = 'docx'
