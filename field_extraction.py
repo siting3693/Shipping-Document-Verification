@@ -37,7 +37,7 @@ FIELD_ALIASES = {
         'gross weight (kg)', 'gross weight', 'gross wt (kgs)', 'gross wt',
         'total gross weight', 'weight', 'gross weight毛重(kgs)',
         'gross weight (kgs)', 'gross wt (kg)', 'gross weight毛重',
-        'total gross wt (kgs)', 'total gross weight (kg)',
+        'total gross wt (kgs)', 'total gross weight (kg)', 'total gross weightnn(kgs)',
     ],
 }
 
