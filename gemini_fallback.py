@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import json
 import logging
 from typing import Optional
@@ -99,7 +101,7 @@ def extract_with_gemini(pdf_bytes: bytes) -> Optional[dict]:
         client = genai.Client(api_key=api_key)
 
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.6-flash",
             contents=[
                 types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
                 _EXTRACTION_PROMPT,
