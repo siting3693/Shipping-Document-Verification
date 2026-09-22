@@ -46,7 +46,7 @@ import scoring
 pipeline_lock = asyncio.Lock()
 pipeline_running = False
 
-DATA_DIR = Path(os.environ.get("DATA_DIR", "/data"))
+DATA_DIR = Path(os.environ.get("DATA_DIR", "."))
 INBOX_DIR = DATA_DIR / "inbox"
 ATTACH_DIR = DATA_DIR / "attachments"
 GROUND_TRUTH_PATH = Path(os.environ.get("GROUND_TRUTH", "/secrets/ground_truth.json"))
@@ -284,7 +284,10 @@ HTML_TEMPLATE = """
         document.body.style.overflow = 'hidden';
 
         fetch('/api/case/' + emailId)
-            .then(function(r){ return r.json(); })
+            .then(function(r){ 
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json(); 
+            })
             .then(function(data){ renderCase(data, body); })
             .catch(function(err){ body.innerHTML = '<p style="color:#c62828;text-align:center">Failed to load case details.</p>'; });
     }
@@ -434,10 +437,16 @@ def get_case_detail(email_id: str):
     Combines email fixture data, submission decision, and re-extracted field
     values from attachments so the UI can render a side-by-side comparison."""
 
-    # Load email fixture
-    email_path = INBOX_DIR / f"{email_id}.json"
+    # Fallback logic for path resolution (mirroring loader.py / main.py)
+    email_path = (INBOX_DIR / f"{email_id}.json").resolve()
     if not email_path.exists():
-        raise HTTPException(404, f"no such email: {email_id}")
+        fallback_path = (Path(__file__).parent.parent / "inbox" / f"{email_id}.json").resolve()
+        if fallback_path.exists():
+            email_path = fallback_path
+
+    # Load email fixture
+    if not email_path.exists():
+        raise HTTPException(404, f"no such email: {email_id} (looked in {email_path})")
     email = json.loads(email_path.read_text())
 
     # Load submission decision
