@@ -1,7 +1,7 @@
-"""Entity pools for SDOC synthetic data.
+"""Entity pools for SheepMeal synthetic data.
 
-Every value here is grounded in the real APRIL SDOC samples
-(APRIL SDOC - Email Samples/*.msg and sdoc sample docs - SI BL Compare/*).
+Every value here is grounded in the real APRIL SheepMeal samples
+(APRIL SheepMeal - Email Samples/*.msg and SheepMeal sample docs - SI BL Compare/*).
 The goal is that a classifier/extractor trained on this data behaves the
 same way it would on the real inbox.
 """

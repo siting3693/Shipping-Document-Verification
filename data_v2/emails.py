@@ -2,7 +2,7 @@
 
 Full realism: coded subjects, forwarded threads, staff signatures with DID
 phone numbers, external-sender warning banners, and mixed formatting -- all
-patterns lifted from the real APRIL SDOC .msg samples.
+patterns lifted from the real APRIL SheepMeal .msg samples.
 
 Categories:
   BL_COMPARISON  -- "TO CONFIRM DOCS" / "REQUEST BL DRAFT" / "Draft BL ... amend"

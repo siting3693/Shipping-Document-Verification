@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 1 classifier for the SDOC hackathon inbox."""
+"""Stage 1 classifier for the SheepMeal hackathon inbox."""
 
 import json
 import re

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SDOC hackathon scoring — v2 dataset (data_v2/).
+SheepMeal hackathon scoring — v2 dataset (data_v2/).
 
 Grades a submission against ground_truth.json. This version understands the
 richer v2 schema, where every record carries:

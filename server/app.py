@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SDOC hackathon inbox + scoring server.
+SheepMeal hackathon inbox + scoring server.
 
 Serves the dataset to participants over HTTP and scores their submissions
 against a ground-truth file that is mounted PRIVATELY and never exposed on any
@@ -54,7 +54,7 @@ SAMPLE_PATH = DATA_DIR / "sample_submission.json"
 REVEAL_GT = os.environ.get("REVEAL_GT", "0") == "1"
 JUDGE_TOKEN = os.environ.get("JUDGE_TOKEN")
 
-app = FastAPI(title="SDOC Hackathon Inbox", version="2.0",
+app = FastAPI(title="SheepMeal Hackathon Inbox", version="2.0",
               description="Serves the shipping-docs inbox and scores submissions. "
                           "Ground truth is held privately and never served.")
 
@@ -84,7 +84,7 @@ HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SDOC Verification Dashboard</title>
+    <title>SheepMeal Verification Dashboard</title>
     <style>
         * { box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin: 20px; background: #f5f7f9; color: #333; }
@@ -147,7 +147,7 @@ HTML_TEMPLATE = """
 <body>
     <div class="container">
         <div class="header">
-            <h1>SDOC Verification Dashboard</h1>
+            <h1>SheepMeal Verification Dashboard</h1>
         </div>
 
         <div class="disclaimer">
@@ -380,7 +380,7 @@ def health():
 @app.get("/api")
 def api_index():
     return {
-        "api": "SDOC Hackathon Inbox",
+        "api": "SheepMeal Hackathon Inbox",
         "endpoints": {
             "GET /health": "liveness probe",
             "GET /emails": "list all email records",

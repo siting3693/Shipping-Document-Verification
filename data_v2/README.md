@@ -1,9 +1,9 @@
-# SDOC synthetic data (v2 — realistic)
+# SheepMeal synthetic data (v2 — realistic)
 
 Synthetic shipping-document inbox for the *Shipping document verification*
 use case (email → classify → extract → compare → discrepancy report).
 
-This set is **grounded in the real APRIL SDOC samples** (Outlook `.msg`
+This set is **grounded in the real APRIL SheepMeal samples** (Outlook `.msg`
 emails and the SI/BL PDF/DOCX/XLSX pairs). Compared to the original toy
 `data/`, it uses real carriers, ports, customers, coded subject lines,
 forwarded email threads, signatures, and multi-format attachments — so a

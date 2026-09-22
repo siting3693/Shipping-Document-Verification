@@ -1,4 +1,4 @@
-# SDOC Verification - Local Startup Manual
+# SheepMeal Verification - Local Startup Manual
 
 This is the verified guide to starting the entire Shipping Document Verification project from a clean state. It covers the backend scoring server, the processing pipeline, and the judge dashboard UI.
 
@@ -79,7 +79,7 @@ python main.py . --submit
 - **`main.py .`**: Scans the current directory for `inbox/` and `attachments/`.
 - **`--submit`**: Posts the final `submission.json` to the Uvicorn server at `http://localhost:8080/submit` to generate the Self-Evaluation Result.
 
-**Expected Output:** You will see a stream of INFO logs followed by the `SDOC VERIFICATION REPORT` and the `SELF-EVALUATION RESULT` JSON. The final score will be `1.0`.
+**Expected Output:** You will see a stream of INFO logs followed by the `SheepMeal VERIFICATION REPORT` and the `SELF-EVALUATION RESULT` JSON. The final score will be `1.0`.
 
 ## 8. Generate / Refresh `submission.json`
 `submission.json` is automatically generated every time you run `python main.py .`.

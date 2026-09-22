@@ -7,20 +7,20 @@ run with a single `docker compose up --build`. It includes the full dataset
 AND ground_truth.json (the server needs it to score; it is served privately,
 never exposed on an endpoint).
 
-    python make_docker_bundle.py                 # -> ../sdoc-hackathon-docker/ + .zip
+    python make_docker_bundle.py                 # -> ../SheepMeal-hackathon-docker/ + .zip
     python make_docker_bundle.py --no-zip
 
 Layout of the produced bundle (top level, so compose's ./server and ./data_v2
 relative paths resolve):
 
-    sdoc-hackathon-docker/
+    SheepMeal-hackathon-docker/
     ├── docker-compose.yml
     ├── README.md                 how to run it
     ├── server/                   app.py, scoring.py, Dockerfile, ...
     └── data_v2/                  inbox/, attachments/, ground_truth.json, ...
 
 ⚠️ This bundle contains ground_truth.json — it is for ORGANIZERS/JUDGES, not
-participants. Give participants sdoc-hackathon-bundle.zip instead.
+participants. Give participants SheepMeal-hackathon-bundle.zip instead.
 """
 import argparse
 import shutil
@@ -29,7 +29,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 ROOT = HERE.parent
 
-RUN_README = """# SDOC Hackathon — Docker distribution (ORGANIZERS)
+RUN_README = """# SheepMeal Hackathon — Docker distribution (ORGANIZERS)
 
 Self-contained. Unzip into a folder Docker can share (your home or Documents —
 **not** `/tmp`, which Docker Desktop on macOS does not bind-mount), then run:
@@ -59,7 +59,7 @@ cd server && python3 score_cli.py submission.json
 ```
 
 ⚠️ This package includes the answer key. Do NOT hand it to participants — give
-them the participant bundle (`sdoc-hackathon-bundle.zip`) instead.
+them the participant bundle (`SheepMeal-hackathon-bundle.zip`) instead.
 
 Change the published port by editing `ports:` in `docker-compose.yml`
 (default `8080:8000`).
@@ -68,7 +68,7 @@ Change the published port by editing `ports:` in `docker-compose.yml`
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default=str(ROOT / "sdoc-hackathon-docker"))
+    ap.add_argument("--out", default=str(ROOT / "SheepMeal-hackathon-docker"))
     ap.add_argument("--no-zip", action="store_true")
     args = ap.parse_args()
 

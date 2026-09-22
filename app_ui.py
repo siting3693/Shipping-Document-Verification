@@ -8,7 +8,7 @@ HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SDOC Verification Dashboard</title>
+    <title>SheepMeal Verification Dashboard</title>
     <style>
         body { font-family: -apple-system, system-ui, sans-serif; margin: 20px; background: #f5f7f9; }
         .container { max-width: 1200px; margin: 0 auto; }
@@ -35,7 +35,7 @@ HTML_TEMPLATE = """
 <body>
     <div class="container">
         <div class="header">
-            <h1>SDOC Verification Dashboard</h1>
+            <h1>SheepMeal Verification Dashboard</h1>
         </div>
         
         <div class="disclaimer">

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-loader.py — one-import access to the SDOC hackathon inbox (participants).
+loader.py — one-import access to the SheepMeal hackathon inbox (participants).
 
 Works two ways with the same API:
 

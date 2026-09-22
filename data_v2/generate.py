@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate realistic SDOC synthetic data (emails + attachments + ground truth).
+"""Generate realistic SheepMeal synthetic data (emails + attachments + ground truth).
 
 Usage:
     python3 generate.py [--seed 42] [--n 500] [--out .]

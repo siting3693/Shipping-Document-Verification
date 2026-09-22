@@ -207,7 +207,7 @@ def run_pipeline(source: str = ".", submit: bool = False) -> dict:
     
     # Print report
     print(f"\n{'='*60}")
-    print(f"  SDOC VERIFICATION REPORT")
+    print(f"  SheepMeal VERIFICATION REPORT")
     print(f"{'='*60}")
     print(f"\nEmails processed: {stats['total']}")
     print(f"Processing time: {elapsed:.1f}s")

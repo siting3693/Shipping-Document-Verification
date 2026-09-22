@@ -1,4 +1,4 @@
-# SDOC Hackathon — Docker distribution (ORGANIZERS)
+# SheepMeal Hackathon — Docker distribution (ORGANIZERS)
 
 Self-contained. Unzip into a folder Docker can share (your home or Documents —
 **not** `/tmp`, which Docker Desktop on macOS does not bind-mount), then run:

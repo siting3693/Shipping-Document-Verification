@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI leaderboard for the SDOC hackathon (JUDGES) — v2 dataset.
+CLI leaderboard for the SheepMeal hackathon (JUDGES) — v2 dataset.
 
     python score_cli.py submission.json
     python score_cli.py submission.json --ground-truth ../data_v2/ground_truth.json
@@ -46,7 +46,7 @@ def main():
 
     s1, s3, rel, e2e = r["stage1"], r["stage3"], r["reliability"], r["end_to_end"]
     print("=" * 62)
-    print(f"  SDOC HACKATHON SCORE  —  {Path(args.submission).name}")
+    print(f"  SheepMeal HACKATHON SCORE  —  {Path(args.submission).name}")
     print(f"  {r['n_emails']} emails")
     print("=" * 62)
 

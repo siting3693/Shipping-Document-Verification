@@ -1028,7 +1028,7 @@ Use real repository fixtures wherever possible.
 Create a local report:
 
 ```text
-=== SDOC REGRESSION ===
+=== SheepMeal REGRESSION ===
 
 Emails processed: ...
 

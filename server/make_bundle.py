@@ -6,8 +6,8 @@ Copies the dataset into a clean folder WITHOUT ground_truth.json, adds the
 participant loader + a quick-start, and (optionally) zips it. Participants get
 this; judges keep data_v2/ground_truth.json private.
 
-    python make_bundle.py                     # -> ./sdoc-hackathon-bundle/
-    python make_bundle.py --zip               # + sdoc-hackathon-bundle.zip
+    python make_bundle.py                     # -> ./SheepMeal-hackathon-bundle/
+    python make_bundle.py --zip               # + SheepMeal-hackathon-bundle.zip
     python make_bundle.py --src ../data_v2 --out /tmp/bundle --zip
 
 Contents of the bundle:
@@ -23,7 +23,7 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 
-QUICKSTART = """# SDOC Hackathon — participant bundle
+QUICKSTART = """# SheepMeal Hackathon — participant bundle
 
 Build a pipeline that reads this inbox and, for each email, decides:
 
@@ -92,7 +92,7 @@ separate reliability axis.
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", default=str(HERE.parent / "data_v2"))
-    ap.add_argument("--out", default=str(HERE.parent / "sdoc-hackathon-bundle"))
+    ap.add_argument("--out", default=str(HERE.parent / "SheepMeal-hackathon-bundle"))
     ap.add_argument("--zip", action="store_true")
     args = ap.parse_args()
 

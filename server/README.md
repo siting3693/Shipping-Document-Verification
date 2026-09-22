@@ -1,4 +1,4 @@
-# SDOC hackathon — delivery kit
+# SheepMeal hackathon — delivery kit
 
 Two ways to get the `data_v2/` dataset into participants' hands. The dataset is
 the same either way; the difference is whether ground truth stays private and

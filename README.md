@@ -1,4 +1,4 @@
-# SDOC Hackathon — participant bundle
+# SheepMeal Hackathon — participant bundle
 
 Build a pipeline that reads this inbox and, for each email, decides:
 

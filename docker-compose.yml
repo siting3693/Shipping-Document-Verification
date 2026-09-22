@@ -1,4 +1,4 @@
-# SDOC hackathon inbox + scoring server.
+# SheepMeal hackathon inbox + scoring server.
 #
 #   docker compose up --build        # serve data + score submissions
 #
