@@ -239,6 +239,45 @@ HTML_TEMPLATE = """
                 </table>
             </div>
         </div>
+
+        <h2 class="section-title">EMAIL CLASSIFICATION</h2>
+        <div class="grid">
+            {% for cat, count in class_counts.items() %}
+            <div class="stat-box clickable class-card" id="card-class-{{ cat }}" onclick="toggleClassification('{{ cat }}')">
+                <h3>{{ cat }}</h3>
+                <div class="num">{{ count }}</div>
+                <div class="hint">Click to inspect &#9662;</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div id="panel-classification" class="accordion">
+            <div class="card" style="margin-top:12px;">
+                <h2 style="margin-top:0;">
+                    Classification Details
+                    <select id="classFilter" onchange="filterClassification(this.value)" style="float:right; padding: 4px; font-size: 14px;">
+                        <option value="All">All Categories</option>
+                        {% for cat in class_counts.keys() %}
+                        <option value="{{ cat }}">{{ cat }}</option>
+                        {% endfor %}
+                    </select>
+                </h2>
+                <div style="margin-bottom: 12px; font-size: 14px; color: #555;">
+                    <em>Note: Emails classified as <strong>BL_COMPARISON</strong> are automatically routed to the SI/BL verification pipeline.</em>
+                </div>
+                <table id="classification-table">
+                    <tr><th>Email ID</th><th>Category</th><th style="width:80px">Action</th></tr>
+                    {% for item in class_items %}
+                    <tr class="class-row" data-category="{{ item.category }}">
+                        <td>{{ item.email_id }}</td>
+                        <td><span class="badge" style="background:#e0e0e0; color:#333">{{ item.category }}</span></td>
+                        <td><button class="btn-view" onclick="openCase('{{ item.email_id }}')">View</button></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
         {% endif %}
     </div>
 
@@ -273,6 +312,39 @@ HTML_TEMPLATE = """
             card.classList.add('active');
             setTimeout(function(){ panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 50);
         }
+    }
+
+    function filterClassification(cat) {
+        var rows = document.querySelectorAll('.class-row');
+        rows.forEach(function(r) {
+            if (cat === 'All' || r.getAttribute('data-category') === cat) {
+                r.style.display = '';
+            } else {
+                r.style.display = 'none';
+            }
+        });
+        document.getElementById('classFilter').value = cat;
+    }
+
+    function toggleClassification(cat) {
+        var panel = document.getElementById('panel-classification');
+        var wasOpen = panel.classList.contains('open');
+        var currentlySelected = document.getElementById('classFilter').value;
+
+        if (wasOpen && currentlySelected === cat) {
+            panel.classList.remove('open');
+            document.querySelectorAll('.class-card').forEach(function(b){ b.classList.remove('active'); });
+            return;
+        }
+
+        document.querySelectorAll('.accordion').forEach(function(a){ a.classList.remove('open'); });
+        document.querySelectorAll('.stat-box.clickable').forEach(function(b){ b.classList.remove('active'); });
+
+        panel.classList.add('open');
+        var card = document.getElementById('card-class-' + cat);
+        if (card) card.classList.add('active');
+        filterClassification(cat);
+        setTimeout(function(){ panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 50);
     }
 
     function openCase(emailId) {
@@ -534,8 +606,28 @@ def dashboard():
     }
 
     items = []
+    class_items = []
+    class_counts = {
+        'BL_COMPARISON': 0,
+        'SI_REQUEST': 0,
+        'INVOICE_QUERY': 0,
+        'GENERAL': 0,
+        'SPAM': 0
+    }
+
     for k, v in data.items():
-        if v.get('category') == 'BL_COMPARISON':
+        cat = v.get('category', 'UNKNOWN')
+        if cat in class_counts:
+            class_counts[cat] += 1
+        else:
+            class_counts[cat] = 1
+
+        class_items.append({
+            'email_id': k,
+            'category': cat
+        })
+
+        if cat == 'BL_COMPARISON':
             items.append({
                 'email_id': k,
                 'status': v.get('status'),
@@ -546,7 +638,7 @@ def dashboard():
     initializing = (len(data) == 0)
 
     t = Template(HTML_TEMPLATE)
-    return t.render(summary=summary, items=items, score=score,
+    return t.render(summary=summary, items=items, class_counts=class_counts, class_items=class_items, score=score,
                     initializing=initializing, pipeline_running=pipeline_running)
 
 
