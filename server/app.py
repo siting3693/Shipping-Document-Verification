@@ -51,6 +51,12 @@ INBOX_DIR = DATA_DIR / "inbox"
 ATTACH_DIR = DATA_DIR / "attachments"
 GROUND_TRUTH_PATH = Path(os.environ.get("GROUND_TRUTH", "/secrets/ground_truth.json"))
 SAMPLE_PATH = DATA_DIR / "sample_submission.json"
+# Keep dashboard outputs at the repository root.  The server is commonly
+# launched with ``server/`` as its working directory, so relative paths would
+# otherwise make the dashboard look in the wrong folder.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+SUBMISSION_PATH = PROJECT_ROOT / "submission.json"
+SCORE_RESULT_PATH = PROJECT_ROOT / "score_result.json"
 REVEAL_GT = os.environ.get("REVEAL_GT", "0") == "1"
 JUDGE_TOKEN = os.environ.get("JUDGE_TOKEN")
 
@@ -474,7 +480,7 @@ async def initialize():
         return {"status": "already running"}
 
     async with pipeline_lock:
-        if Path('submission.json').exists():
+        if SUBMISSION_PATH.exists():
             return {"status": "already complete"}
 
         pipeline_running = True
@@ -482,7 +488,8 @@ async def initialize():
             process = await asyncio.create_subprocess_exec(
                 sys.executable, "main.py", ".",
                 stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE
+                stderr=asyncio.subprocess.PIPE,
+                cwd=str(PROJECT_ROOT),
             )
             await process.communicate()
 
@@ -496,7 +503,7 @@ async def initialize():
                     env=env
                 )
                 stdout, _ = await score_proc.communicate()
-                Path('score_result.json').write_bytes(stdout)
+                SCORE_RESULT_PATH.write_bytes(stdout)
         finally:
             pipeline_running = False
 
@@ -524,7 +531,7 @@ def get_case_detail(email_id: str):
     # Load submission decision
     sub = {}
     try:
-        sub = json.loads(Path('submission.json').read_text()).get(email_id, {})
+        sub = json.loads(SUBMISSION_PATH.read_text()).get(email_id, {})
     except Exception:
         pass
 
@@ -582,13 +589,13 @@ def get_case_detail(email_id: str):
 @app.get("/", response_class=HTMLResponse)
 def dashboard():
     try:
-        with open('submission.json') as f:
+        with SUBMISSION_PATH.open() as f:
             data = json.load(f)
     except Exception:
         data = {}
 
     try:
-        with open('score_result.json') as f:
+        with SCORE_RESULT_PATH.open() as f:
             score = json.load(f)
     except Exception:
         score = None
