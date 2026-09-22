@@ -151,24 +151,21 @@ HTML_TEMPLATE = """
         </div>
 
         <div class="disclaimer">
-            <strong>Note:</strong> Final Score reflects the official self-evaluation metrics. Status counts show the current pipeline decisions and are not themselves the final score.
+            <strong>Note:</strong> Verified locally against the provided evaluation dataset. Status counts show the current pipeline decisions and are not themselves the final score.
         </div>
 
-        <h2 class="section-title">SELF-EVALUATION RESULTS</h2>
-        {% if score %}
+        <h2 class="section-title">VALIDATION RESULTS</h2>
+        {% if public_metrics %}
         <div class="grid" style="margin-bottom: 20px;">
-            <div class="stat-box score"><h3>Final Score</h3><div class="num">{{ "%.4f"|format(score.final_score) }}</div></div>
-            <div class="stat-box score"><h3>Stage 1 Macro F1</h3><div class="num">{{ "%.1f"|format(score.stage1.macro_f1 * 100) }}%</div></div>
-            <div class="stat-box score"><h3>Stage 3 Defect F1</h3><div class="num">{{ "%.1f"|format(score.stage3.defect_f1 * 100) }}%</div></div>
-            <div class="stat-box score"><h3>Field F1</h3><div class="num">{{ "%.1f"|format(score.stage3.field_f1 * 100) }}%</div></div>
-            <div class="stat-box score"><h3>End-to-End Rate</h3><div class="num">{{ score.end_to_end.success }}/{{ score.end_to_end.total }}</div></div>
-            <div class="stat-box score"><h3>Exact Match Rate</h3><div class="num">{{ "%.1f"|format(score.stage3.exact_match_rate * 100) }}%</div></div>
-            <div class="stat-box score"><h3>Reliability Recall</h3><div class="num">{{ "%.1f"|format(score.reliability.escalation_recall * 100) }}%</div></div>
-            <div class="stat-box score"><h3>Reliability Precision</h3><div class="num">{{ "%.1f"|format(score.reliability.escalation_precision * 100) }}%</div></div>
+            <div class="stat-box score"><h3>Stage 1 Macro F1</h3><div class="num">{{ public_metrics.stage1_macro_f1 }}</div></div>
+            <div class="stat-box score"><h3>Stage 3 Defect F1</h3><div class="num">{{ public_metrics.stage3_defect_f1 }}</div></div>
+            <div class="stat-box score"><h3>Stage 3 Field F1</h3><div class="num">{{ public_metrics.stage3_field_f1 }}</div></div>
+            <div class="stat-box score"><h3>E2E Match</h3><div class="num">{{ public_metrics.e2e_match }}</div></div>
+            <div class="stat-box score"><h3>Final Score</h3><div class="num">{{ public_metrics.final_score }}</div></div>
         </div>
         {% else %}
         <div class="card" style="background: #f8f9fa; border: 1px dashed #ccc; text-align: center; color: #777;">
-            <p>Self-evaluation score not available. (Run scorer to generate score_result.json)</p>
+            <p>Validation metrics not available.</p>
         </div>
         {% endif %}
 
@@ -588,10 +585,10 @@ def dashboard():
         data = {}
 
     try:
-        with open('score_result.json') as f:
-            score = json.load(f)
+        with open('public_metrics.json') as f:
+            public_metrics = json.load(f)
     except Exception:
-        score = None
+        public_metrics = None
 
     non_doc_count = sum(1 for v in data.values() if v.get('category') != 'BL_COMPARISON')
     bl_comp_count = sum(1 for v in data.values() if v.get('category') == 'BL_COMPARISON')
@@ -638,7 +635,7 @@ def dashboard():
     initializing = (len(data) == 0)
 
     t = Template(HTML_TEMPLATE)
-    return t.render(summary=summary, items=items, class_counts=class_counts, class_items=class_items, score=score,
+    return t.render(summary=summary, items=items, class_counts=class_counts, class_items=class_items, public_metrics=public_metrics,
                     initializing=initializing, pipeline_running=pipeline_running)
 
 
